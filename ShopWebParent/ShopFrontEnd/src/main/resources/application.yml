@@ -1,0 +1,29 @@
+server:
+    port: 8081
+    servlet:
+        context-path: /Shop
+spring:
+    datasource:
+        password: Password12#
+        url: jdbc:mysql://localhost:3306/shopdb
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+                format_sql: true
+        show-sql: true
+    security:
+        oauth2:
+            client:
+                registration:
+                    google:
+                        client-id: 350822329101-2qc6l5rk890qb1bmpr3taplkknvahpeh.apps.googleusercontent.com
+                        client-secret: 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
+                        scope:
+                            - email
+                            - profile
+    main:
+        allow-circular-references: true
